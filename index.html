@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <div class="cart">
+    <div class="top_cart">
+      <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+      <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+
+    <div class="items_in_cart" id="cart_items"></div>
+
+    <div class="bottom_cart">
+      <div class="total">
+        <p>subtotal</p>
+        <p class="price_cart_total">$0</p>
+      </div>
+      <div class="button_cart">
+        <a href="./check.html" class="btn_cart">Checkout</a>
+        <span onclick="open_close_cart()" class="btn_cart trans_bg">Shop More</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  </div>
+  <!-- Header -->
+  <header>
+    <div class="top_header">
+      <div class="container">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="./img/product/222.webp" alt="Store Logo" id="mm">
+        </a>
+
+        <!-- Search Form -->
+        <form action="#" class="search_box">
+
+          <!-- Category -->
+          <div class="select_box">
+            <select class="category" name="category">
+              <option value="">Choose Category</option>
+              <option value="tshirts">T-Shirts</option>
+              <option value="hoodies">Hoodies</option>
+              <option value="jackets">Jackets</option>
+              <option value="jeans">Jeans</option>
+              <option value="dresses">Dresses</option>
+              <option value="skirts">Skirts</option>
+              <option value="shoes">Shoes</option>
+            </select>
+          </div>
+
+          <!-- Search Input -->
+          <input type="text" name="search" id="search" placeholder="Search for product...">
+
+          <!-- Search Button -->
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+
+        <!-- Icons -->
+        <div class="header_icons">
+
+          <!-- Favorite -->
+          <div class="icon">
+            <a href="#">
+              <i class="fa-regular fa-heart"></i>
+              <span class="count count_favorite">0</span>
+            </a>
+          </div>
+
+          <!-- Cart -->
+          <div class="icon">
+            <a href="#">
+              <i onclick="open_close_cart()" class="fa-solid fa-cart-arrow-down"></i>
+              <span class="count count_item_header">0</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="bottom_header">
+      <div class="container">
+        <nav class="nav">
+          <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+          <div class="category_nav">
+
+            <div onclick="open_category_list()" class="category_btn">
+              <i class="fa-solid fa-bars"></i>
+              <p>Browse Category</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="category_nav_list">
+              <a href="#">New Arrivals</a>
+              <a href="#">Women Collection</a>
+              <a href="#">Men Collection</a>
+              <a href="#">Dresses</a>
+              <a href="#">Shoes & Bags</a>
+              <a href="#">Accessories</a>
+              <a href="#">Sale</a>
+            </div>
+          </div>
+          <ul class="nav_links">
+            <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Acceesories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login_signup btns">
+          <a onclick="open_Menu()" href="./Login.html" class="btn">Login <i
+              class="fa-solid fa-right-to-bracket"></i></a>
+          <a onclick="open_Menu()" href="./SignUp.html" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="slider">
+    <div class="container">
+
+      <!--swiper-->
+      <div class="slide_swp mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide "><a><img class="im" src="./img/product/01.webp" alt=""></a></div>
+          <div class="swiper-slide"><a><img class="im" src="./img/product/02.webp" alt=""></a></div>
+          <div class="swiper-slide"><a><img class="im" src="./img/product/03.webp" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination main-pagi"></div>
+
+      </div>
+
+      <div class="banner_2">
+        <a href="#"><img src="./img/product/04.webp"></a>
+      </div>
+
+
+
+    </div>
+  </div>
+  <div class="banner_4">
+
+    <div class="container">
+
+      <div class="box">
+        <a href="#" class="link_btn"></a>
+        <img src="./img/product/06.webp" alt="">
+        <div class="text">
+          <h5>New Collection</h5>
+          <h5>Best Deals</h5>
+          <div class="sale">
+            <p>Up <br>to </p>
+            <span>35%</span>
+
+          </div>
+          <h6>Shop Now</h6>
+        </div>
+      </div>
+
+
+      <div class="box">
+        <a href="#" class="link_btn"></a>
+        <img src="./img/product/05.webp" alt="">
+        <div class="text">
+          <h5>New Collection</h5>
+          <h5>Best Deals</h5>
+          <div class="sale">
+            <p>Up <br>to </p>
+            <span>50%</span>
+
+          </div>
+          <h6>Shop Now</h6>
+        </div>
+      </div>
+
+      <div class="box">
+        <a href="#" class="link_btn"></a>
+        <img src="./img/product/07.webp" alt="">
+        <div class="text">
+          <h5>New Collection</h5>
+          <h5>Best Deals</h5>
+          <div class="sale">
+            <p>Up <br>to </p>
+            <span>25%</span>
+
+          </div>
+          <h6>Shop Now </h6>
+        </div>
+      </div>
+
+      <div class="box">
+        <a href="#" class="link_btn"></a>
+        <img src="./img/product/08.webp" alt="">
+        <div class="text">
+          <h5>New Collection</h5>
+          <h5>Best Deals</h5>
+          <div class="sale">
+            <p>Up <br>to </p>
+            <span>60%</span>
+          </div>
+          <h6>Shop Now</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--product-->
+  <div class="slider_products slide">
+    <div class="container">
+      <div class="slide_product mySwiper">
+        <div class="top_slide">
+          <h2><i class="fa-solid fa-tag"></i>Style Steals</h2>
+          <div class="swiper_btn_container">
+            <div class="swiper-button-prev btn_Swip"></div>
+            <div class="swiper-button-next btn_Swip"></div>
+          </div>
+        </div>
+        <div class="products swiper-wrapper" id="swiper_items_sale"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banners">
+    <div class="container">
+      <div class="banners_boxs banner_2_img">
+        <a href="#" class="box"><img src="./img/product/10.webp" alt=""></a>
+        <a href="#" class="box"><img src="./img/product/11.webp" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="slider_products slide">
+    <div class="container">
+      <div class="slide_product mySwiper">
+        <div class="top_slide">
+          <h2><i class="fa-solid fa-tag"></i>Warmth</h2>
+          <div class="swiper_btn_container">
+            <div class="swiper-button-prev btn_Swip"></div>
+            <div class="swiper-button-next btn_Swip"></div>
+          </div>
+        </div>
+        <div class="products swiper-wrapper" id="swiper_elictronics"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="banners">
+    <div class="container">
+      <div class="banners_boxs banner_3_img">
+        <a href="#" class="box"><img src="img/product/42.webp" alt=""></a>
+        <a href="#" class="box"><img src="img/product/43.webp" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="slider_products slide">
+    <div class="container">
+      <div class="slide_product mySwiper">
+        <div class="top_slide">
+          <h2><i class="fa-solid fa-tag"></i>Stride</h2>
+          <div class="swiper_btn_container">
+            <div class="swiper-button-prev btn_Swip"></div>
+            <div class="swiper-button-next btn_Swip"></div>
+          </div>
+        </div>
+        <div class="products swiper-wrapper" id="swiper_shoes"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider_products slide">
+    <div class="container">
+      <div class="slide_product mySwiper">
+        <div class="top_slide">
+          <h2><i class="fa-solid fa-tag"></i>TOP WEAR</h2>
+          <div class="swiper_btn_container">
+            <div class="swiper-button-prev btn_Swip"></div>
+            <div class="swiper-button-next btn_Swip"></div>
+          </div>
+        </div>
+        <div class="products swiper-wrapper" id="swiper_tshirts"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="big_row">
+        <img class="logo_footer" src="./img/product/222.webp" alt="Asmaa Clothing Store">
+        <p>Asmaa Store: Your premier destination for the latest global fashion trends with high quality and competitive
+          prices. Your elegance is our mission.</p>
+        <div class="icons_footer">
+          <a href="#"><i class="fa-solid fa-phone"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Women's Fashion</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Dresses & Gowns </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Abayas & Oriental </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Casual Wear </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Shoes & Bags </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Accessories </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Men's Fashion</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Shirts & T-Shirts </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Formal Suits </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Denim & Jeans </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Sportswear </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Men's Shoes </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Helpful Links</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Return Policy </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Track Your Order </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> FAQ </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Contact Us </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> About Us </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom_footer">
+      <div class="container">
+        <p>&copy; <span>Asmaa Store.</span> All Rights Reserved 2026.</p>
+
+        <div class="payment_img">
+          <img src="img/product/45.webp" alt="Payment Methods">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <script src="./product.js"></script>
+
+  <script src="script.js"></script>
+
+  <script src="./swiper.js"></script>
+</body>
+
+</html>

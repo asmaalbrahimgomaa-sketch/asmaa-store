@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Asmaa Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Modern CSS Reset & Fonts */
+        :root {
+            --primary-color: #ff8716; /* Your brand orange */
+            --primary-hover: #e26e02;
+            --bg-color: #f0f2f5;
+            --text-color: #333;
+            --input-border: #ddd;
+            --shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* A more modern font */
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--text-color);
+        }
+
+        /* Glassmorphism style container */
+        .login-container {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px); /* Gentle lift on hover */
+        }
+
+        /* Logo Area */
+        .brand-logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        /* Improved Input Fields */
+        .input-group {
+            margin-bottom: 22px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            transition: color 0.3s;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 45px; /* Space for icon */
+            border: 2px solid var(--input-border);
+            border-radius: 10px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary-color);
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255, 135, 22, 0.1);
+            outline: none;
+        }
+
+        .input-group input:focus + i {
+            color: var(--primary-color);
+        }
+
+        /* Modern Button Style */
+        .login-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 5px 15px rgba(226, 110, 2, 0.3);
+        }
+
+        /* Footer Links */
+        .footer-link {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-link a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Importing a nice modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="brand-logo">Asmaa Store</div>
+        <h2>Welcome Back</h2>
+        <form>
+            <div class="input-group">
+                <label>Email Address</label>
+                <div class="input-wrapper">
+                    <input type="email" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <div class="input-wrapper">
+                    <input type="password" placeholder="Enter your password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+            <button type="submit" class="login-btn">
+                <span>Login</span>
+                <i class="fas fa-sign-in-alt"></i>
+            </button>
+        </form>
+        <div class="footer-link">
+            Don't have an account? <a href="./SignUp.html">Sign Up Now</a>
+        </div>
+    </div>
+</body>
+</html>

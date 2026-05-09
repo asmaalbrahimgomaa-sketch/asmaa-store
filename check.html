@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Check Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+  <div class="cart">
+    <div class="top_cart">
+      <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+      <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+
+    <div class="items_in_cart" id="cart_items"></div>
+
+    <div class="bottom_cart">
+      <div class="total">
+        <p>subtotal</p>
+        <p class="price_cart_total">$0</p>
+      </div>
+      <div class="button_cart">
+        <a href="./check.html" class="btn_cart" onclick="open_close_cart()">Checkout</a>
+        <span onclick="open_close_cart()" class="btn_cart trans_bg">Shop More</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Header -->
+  <header>
+    <div class="top_header">
+      <div class="container">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+          <img src="./img/product/222.webp" alt="Store Logo" id="mm">
+        </a>
+
+        <!-- Search Form -->
+        <form action="#" class="search_box">
+
+          <!-- Category -->
+          <div class="select_box">
+            <select class="category" name="category">
+              <option value="">Choose Category</option>
+              <option value="tshirts">T-Shirts</option>
+              <option value="hoodies">Hoodies</option>
+              <option value="jackets">Jackets</option>
+              <option value="jeans">Jeans</option>
+              <option value="dresses">Dresses</option>
+              <option value="skirts">Skirts</option>
+              <option value="shoes">Shoes</option>
+            </select>
+          </div>
+
+          <!-- Search Input -->
+          <input type="text" name="search" id="search" placeholder="Search for product...">
+
+          <!-- Search Button -->
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+        </form>
+
+        <!-- Icons -->
+        <div class="header_icons">
+
+          <!-- Favorite -->
+          <div class="icon">
+            <a href="#">
+              <i class="fa-regular fa-heart"></i>
+              <span class="count count_favorite">0</span>
+            </a>
+          </div>
+
+          <!-- Cart -->
+          <div class="icon">
+            <a href="#">
+              <i onclick="open_close_cart()" class="fa-solid fa-cart-arrow-down"></i>
+              <span class="count count_item_header">0</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="bottom_header">
+      <div class="container">
+        <nav class="nav">
+          <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+          <div class="category_nav">
+
+            <div onclick="open_category_list()" class="category_btn">
+              <i class="fa-solid fa-bars"></i>
+              <p>Browse Category</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="category_nav_list">
+              <a href="#">New Arrivals</a>
+              <a href="#">Women Collection</a>
+              <a href="#">Men Collection</a>
+              <a href="#">Dresses</a>
+              <a href="#">Shoes & Bags</a>
+              <a href="#">Accessories</a>
+              <a href="#">Sale</a>
+            </div>
+          </div>
+          <ul class="nav_links">
+            <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Acceesories</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="login_signup btns">
+          <a onclick="open_Menu()" href="./Login.html" class="btn">Login <i
+              class="fa-solid fa-right-to-bracket"></i></a>
+          <a onclick="open_Menu()" href="./SignUp.html" class="btn">Sign UP <i class="fa-solid fa-user-plus"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="checkout">
+    <form id="form_contact">
+      <!-- حقول مخفية لتخزين بيانات الطلب وإرسالها -->
+      <input type="hidden" id="items" name="items">
+      <input type="hidden" id="total_Price" name="Total Price">
+      <input type="hidden" id="count_Items" name="Count Items">
+      <div class="container">
+        <div class="ordersummary">
+          <h1>Order Summary</h1>
+
+          <div class="items" id="checkout_items">
+
+
+          </div>
+          <div class="bottom_summary">
+            <div class="shop_table">
+              <p>Subtotal :</p>
+              <span class="subtotal_checkout">$325.00</span>
+            </div>
+
+            <div class="shop_table">
+              <p>Shipping :</p>
+              <span>$20.00</span>
+            </div>
+
+            <div class="shop_table">
+              <p>total :</p>
+              <span class="total_checkout">$325.00</span>
+            </div>
+
+
+            <div class="button_div">
+
+
+              <button type="submit">Place order</button>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="input_info">
+
+          <div class="address">
+            <h2>Delivery Address</h2>
+
+            <div class="inputs">
+              <label for="">Email</label>
+              <input type="email" placeholder="Enter your email" name="Email" required>
+
+              <label for="">Name</label>
+              <input type="text" placeholder="enter your name" name="Name" required>
+
+              <label for="">Address</label>
+              <input type="text" placeholder="enter your address" name="Address" required>
+
+              <label for="">Phone</label>
+              <input type="number" placeholder="enter your phone" name="Phone" required>
+            </div>
+          </div>
+
+          <div class="coupon">
+            <h2>Coupon Code</h2>
+
+            <div class="inputs">
+              <label for="">Coupon code</label>
+              <input type="text" name="Coupon" placeholder="enter your coupon code">
+            </div>
+
+            <div class="btn_coupon">
+              <button type="button">Apply Coupon</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="big_row">
+        <img class="logo_footer" src="./img/product/222.webp" alt="Asmaa Clothing Store">
+        <p>Asmaa Store: Your premier destination for the latest global fashion trends with high quality and competitive
+          prices. Your elegance is our mission.</p>
+        <div class="icons_footer">
+          <a href="#"><i class="fa-solid fa-phone"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Women's Fashion</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Dresses & Gowns </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Abayas & Oriental </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Casual Wear </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Shoes & Bags </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Accessories </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Men's Fashion</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Shirts & T-Shirts </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Formal Suits </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Denim & Jeans </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Sportswear </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Men's Shoes </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4>Helpful Links</h4>
+        <div class="links">
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Return Policy </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Track Your Order </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> FAQ </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> Contact Us </a>
+          <a href="#"><i class="fa-solid fa-caret-right"></i> About Us </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom_footer">
+      <div class="container">
+        <p>&copy; <span>Asmaa Store.</span> All Rights Reserved 2026.</p>
+
+        <div class="payment_img">
+          <img src="img/product/45.webp" alt="Payment Methods">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <script src="./product.js"></script>
+  <script src="script.js"></script>
+  <script src="./checkout.js"></script>
+  <script src="./swiper.js"></script>
+
+</body>
+
+</html>
